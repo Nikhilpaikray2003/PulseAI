@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block content %}
+    <header class="main-header">
+        <h1>Contact Us - Pulse AI</h1>
+    </header>
+    <div class="container">
+        <div class="content">
+            <section class="section">
+                <h2>Get in Touch</h2>
+                <p>If you have any questions, feedback, or inquiries, we'd love to hear from you. Please use the contact form below or reach out to us directly at <a href="mailto:info@pulseai.com">info@pulseai.com</a>.</p>
+            </section>
+            <section class="section">
+                <h2>Contact Form</h2>
+                <form method="post" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
+    </div>
+    
+{% endblock content %}

@@ -1,0 +1,20 @@
+
+@media(max-width: 565px){
+    .hero-text{
+        background-image: url('./../images/hero-img.jpg');
+        padding: 1rem;
+        /* color: #ee9c05; */
+    }
+}
+
+.blog-details img{
+    display: block;
+    margin: auto;
+}
+.success{
+    color: green;
+}
+.error{
+    color: red;
+}
+
